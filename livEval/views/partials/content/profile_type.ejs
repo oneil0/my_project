@@ -1,0 +1,13 @@
+<% if (type_profile == 'administrateur') { %>
+
+    <% include admin_tab.ejs %>
+
+<% } if (type_profile == 'professeur') { %>
+
+	<% include prof_tab.ejs %>
+
+<% } if (type_profile == 'etudiant') { %>
+
+	<% include etudiant_tab.ejs %>
+
+<% } %>

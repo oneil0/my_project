@@ -1,0 +1,105 @@
+
+
+<div class="panel panel-default">
+    <h3 class="panel-heading">Liste des utilisateurs</h3>
+    <div class="input-group">
+      <input ng-model="query" type="text" class="form-control" placeholder="Chercher un utlisateur" style="/*ovale*/
+  -webkit-border-radius: 140px 140px 140px 140px;
+  -moz-border-radius:    140px 140px 140px 140px; 
+  border-radius:         140px 140px 140px 140px;">
+    </div>
+    <table class="table table-hover">
+        <thead>
+            <tr> 
+                <th>Noms/Prénoms</th>
+                <th>&nbsp;</th>
+                <th>&nbsp;</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="user in Userslist | filter : query">
+                <td>
+                    <strong>
+                        {{user.name.last | uppercase}} {{user.name.first | uppercase}}
+                    </strong>
+                </td>
+                <td>
+                    <button class="btn btn-warning" data-toggle="modal" data-target="#edit{{user._id}}"><i class="glyphicon glyphicon-edit"></i>Editer</button>
+                    <div class="modal fade" id="edit{{user._id}}" tabindex="-1" role="dialog" aria-labelledby="editLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">
+                                        <span aria-hidden="true">&times;</span>
+                                        <span class="sr-only">Fermer</span>
+                                    </button>
+                                    <h4 class="modal-title" id="editLabel">Infos Utilisateur</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <legend><i class="glyphicon glyphicon-globe"></i> Identité </legend>
+                                    <form action="#" method="post" class="form" role="form">
+                                        <div class="row">
+                                            <div class="col-md-6 form-group">
+                                                <label for="prenom">Prénom</label>
+                                                <input id="prenom" class="form-control" name="firstname" placeholder="Prénom" type="text" value="{{user.name.first}}" required autofocus />
+                                            </div>
+                                            <div class="col-md-6 form-group">
+                                                <label for="nom">Nom</label>
+                                                <input id="nom" class="form-control" name="lastname" placeholder="Nom" type="text" value="{{user.name.last}}" required />
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="email">E-mail</label>
+                                           <input id="email" class="form-control" name="youremail" placeholder="E-mail" type="email" value="{{user.email}}" readonly/>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="profile">Profile de l'utilisateur</label>
+                                            <select id="profile" class="form-control">
+                                                <option selected value="{{user.profile}}">{{user.profile}}</option>
+                                                <option value="professeur">Professeur</option>
+                                                <option value="etudiant">Etudiant</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="password">Mot de passe</label>
+                                            <input id="password" class="form-control" name="password" placeholder="Nouveau mot de passe" type="password" />
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                                    <button ng-click="updateUser()" type="button" class="btn btn-primary">Mettre à jour</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <button class="btn btn-danger" data-toggle="modal" data-target="#delete{{user._id}}">
+                        <i class="glyphicon glyphicon-remove"></i>Supprimer
+                    </button>
+                    <div class="modal" id="delete{{user._id}}">
+                        <div class="modal-dialog modal-sm">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">
+                                        <span aria-hidden="true">&times;</span>
+                                        <span class="sr-only">Fermer</span>
+                                    </button>
+                                    <h4 class="modal-title">Suppression utilisateur</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Etes-vous sur de vouloir supprimer cet utilisateur?</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
+                                    <button type="button" ng-click="RemoveUser(user._id)" data-dismiss="modal" class="btn btn-danger">Supprimer</button>
+                                </div>
+                            </div><!-- /.modal-content -->
+                        </div><!-- /.modal-dialog -->
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,18 @@
+<form action="/login" method="post" id="login">
+    <legend><h1 class="text-center">Connexion à l'application</h1></legend>
+    <!-- show any messages that come back with authentication -->
+    <% if (message.length > 0) { %>
+        <div class="alert alert-danger"><%= message %></div>
+    <% } %>
+    <div>
+        <input type="text" name="email" placeholder="Votre Email" autofocus>
+    </div>
+    
+    <div>
+        <input type="password" name="password" placeholder="Votre Mot de passe">
+    </div>
+    
+    <button id="btn-login" class="col-md-12">
+        <input type="submit" value="Se connecter">
+    </button>
+</form>

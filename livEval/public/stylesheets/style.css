@@ -1,0 +1,278 @@
+@import url(/stylesheets/menu.css);
+@font-face {
+    font-family: "advent";
+    src: url("bootstrap/fonts/advent-Re.otf");
+}
+@import url(/stylesheets/reset.css);
+
+/**===================================================================*==========================*/
+/**===================================================================*==========================*/
+/**===================================================================*==========================*/
+/**===================================================================*==========================*/
+
+/**===================================================================*==========================*/
+/**===================================================================*==========================*/
+body { 
+  position: relative; 
+  background:url("../images/bkg/bkg.jpg") no-repeat center center fixed;
+  background-size: cover;
+  font: 13px/20px 'Lucida Grande', Tahoma, Verdana, sans-serif;
+  color: #404040;
+
+  padding-bottom: 3em;
+}
+* {
+  -moz-box-sizing: border-box; 
+  box-sizing: border-box;
+}
+
+.container {
+  min-height: 100%;
+  position: relative;
+  width: 640px;
+}
+.container-fluid {
+  min-height: 100%;
+  position: relative;
+}
+#header {
+  background-color : #2b82ad;
+
+  font-family      : advent; font-size : 40px; font-weight : normal;
+  color: #062f3c;
+
+  height           : 270px;
+
+  border-bottom: 5px solid black;
+
+  -webkit-box-shadow: inset 0px -31px 93px -19px rgba(1,3,33,1);
+  -moz-box-shadow: inset 0px -31px 93px -19px rgba(1,3,33,1);
+  box-shadow: inset 0px -31px 93px -19px rgba(1,3,33,1);
+}
+#header div p {
+  padding: 10px;
+}
+section {
+  position: relative;
+}
+footer {
+  background: gray;
+  padding-top: 10px;
+  position: inherit;
+  bottom: -100px;
+  width: 80%;
+  left: 100px;
+  height: 3em;
+  border-radius: 3px;
+  color: #FFF;
+  background-color: rgba(0, 0, 0, 0.66);
+}
+
+/**===================================================================*==========================*/
+/**===================================================================*==========================*/
+.rule {
+  border        : 0;
+  height        : 10px;
+  background    : url("/images/bkg/astre.jpg") 50% 0 no-repeat;
+  border-radius : 5px;
+  width         : 695px;
+  float         : left;
+}
+.rule2 {
+  border        : 0;
+  height        : 10px;
+  background    : url("/images/bkg/astre.jpg") 50% 0 no-repeat;
+  border-radius : 5px;
+  width         : 100%;
+  float         : left;
+}
+/**===================================================================*==========================*/
+/**===================================================================*==========================*/
+/**===================================================================*==========================*/
+/**===================================================================*==========================*/
+form {
+  height: 400px;
+}
+form #login {
+  border-bottom: 5px solid #062f3c;
+}
+legend h1 {
+  padding: 10px 10px;
+
+  background: #2b82ad;
+
+  height: 40px;
+
+  color: white;
+
+  font-size: 20px;
+
+  /*arrondir les bords */
+  border-radius: 23px 23px 0px 0px;
+  -moz-border-radius: 23px 23px 0px 0px;
+  -webkit-border-radius: 23px 23px 0px 0px;
+  
+  /*ombrage interne comme pour le header*/
+  -webkit-box-shadow: inset 0px -31px 93px -19px rgba(1,3,33,1);
+  -moz-box-shadow: inset 0px -31px 93px -19px rgba(1,3,33,1);
+  box-shadow: inset 0px -31px 93px -19px rgba(1,3,33,1);
+
+}
+#login {
+  font-size: 18px;
+}
+#login div {
+  bottom: 20px;
+}
+input {
+  width         : 100%;
+
+  padding       : 10px 10px;
+
+  margin        : 0;
+
+  background    : none;
+
+  border        : none;
+  border-bottom : 2px solid #062f3c;
+
+  position      : relative;
+
+  display       : block;
+  
+  height        : 100%;
+}
+input[type=text] {
+  margin: 40px 0;
+
+  font-family: serif;
+  font-weight: normal;
+  font-size: 24px;
+}
+input[type=password] {
+  margin: 40px 0;
+
+  font-family: serif;
+  font-weight: normal;
+  font-size: 24px;
+}
+input[type=submit] {
+  border: none;
+}
+input:focus {
+  outline : none;
+}
+input:active {
+  background: none;
+}
+/**===================================================================*==========================*/
+/**===================================================================*==========================*/
+/**===================================================================*==========================*/
+/**===================================================================*==========================*/
+#btn-login {
+  margin: 10px 0;
+
+  background: none;
+
+  border: 5px double #062f3c;
+  
+  /*ovale*/
+  -webkit-border-radius: 140px 140px 140px 140px;
+  -moz-border-radius:    140px 140px 140px 140px; 
+  border-radius:         140px 140px 140px 140px; 
+
+  font-size: 20px;
+  font-weight: bold;
+
+  color: #062f3c;
+}
+#btn-login:hover {
+  background: #062f3c;
+  color: #FFF;
+
+  border: 5px double #FFF;
+
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+/**===================================================================*==========================*/
+/**================================ABOUT==============================*==========================*/
+/**===================================================================*==========================*/
+/**===================================================================*==========================*/
+#about {
+  padding: 10px 10px;
+
+  height: 100%;
+
+  font-size: 18px;
+  font-family      : sans-serif;
+  color: #062f3c;
+
+  border-top: 2px solid #062f3c;
+  border-bottom: 2px solid #062f3c;
+}
+/**===================================================================*==========================*/
+/**================================PROFILE HEADER==============================*=================*/
+/**===================================================================*==========================*/
+/**===================================================================*==========================*/
+#profile-header {
+  background-color : #2b82ad;
+
+  font-family      : advent; 
+  font-size : 20px; 
+  font-weight : normal;
+  color: #FFF;
+
+  height           : 70px;
+
+  -webkit-box-shadow: inset 0px -31px 93px -19px rgba(1,3,33,1);
+  -moz-box-shadow: inset 0px -31px 93px -19px rgba(1,3,33,1);
+  box-shadow: inset 0px -31px 93px -19px rgba(1,3,33,1);
+}
+/**===================================================================*==========================*/
+/**================================btn-logout==================================*=================*/
+/**===================================================================*==========================*/
+/**===================================================================*==========================*/
+#btn-logout {
+  margin: 10px 0;
+
+  background: none;
+  float: right;
+
+  width: 200px;
+
+  border: 10px double #c4122e;
+  
+  /*ovale*/
+  -webkit-border-radius: 140px 140px 140px 140px;
+  -moz-border-radius:    140px 140px 140px 140px; 
+  border-radius:         140px 140px 140px 140px; 
+
+  font-size: 20px;
+  font-weight: bold;
+
+  color: #062f3c;
+}
+#btn-logout a {
+  color: #062f3c;
+}
+#btn-logout a:hover {
+  text-decoration: none;
+  color: #062f3c
+}
+/**===================================================================*==========================*/
+/**===================================================================*==========================*/
+.panel {
+  padding: 20px;
+  margin: 20px 0;
+}
+/**===================================================================*==========================*/
+/**===================================================================*==========================*/
+#form_questionnaire {
+  width: 100%;
+  height: 700px;
+  overflow: scroll;
+}

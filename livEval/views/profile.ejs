@@ -1,0 +1,22 @@
+<!-- views/profile.ejs -->
+<!doctype html>
+<html ng-app="AdminDashboard">
+<head>
+    <% include partials/template/head.ejs %>
+</head>
+<body ng-controller="ProfileCTRL">
+    <div class="container-fluid">
+        <% include partials/template/header.ejs %>
+    </div>
+
+    <div class="container">
+        <% include partials/content/profile_type.ejs %>
+        
+        <footer class="row">
+            <% include partials/template/footer.ejs %>
+        </footer>
+    </div>
+    <% include partials/template/jsdefaults.ejs %>
+</body>
+</html>
+

@@ -1,0 +1,23 @@
+<nav class="row">
+    <div class="col-md-12">
+        <ul class="nav nav-pills">
+            <li role="presentation" class="active">
+                <a href="#info" data-toggle="tab" role="tab">Informations utilisateurs</a>
+            </li>
+            <li role="presentation">
+                <a href="#create" data-toggle="tab" role="tab">Créer utilisateur</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div role="tabpanel" id="info" class="tab-pane fade active in">
+                <div class="col-md-6">
+                    <% include affiche_users.ejs %>
+                </div>
+            </div>
+            <div role="tabpanel" id="create" class="tab-pane fade">
+                <h2 class="text-center">Créer utilisateur</h2>
+                <% include /profile_create_user.ejs %>
+            </div>
+        </div>
+    </div>
+</nav>
